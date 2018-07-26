@@ -8,7 +8,11 @@
     </a-assets>
     <a-marker id="marker" preset='hiro'>
         <a-entity line="start:0 0 0; end: 4 0 0; color: red;" line__2="start:0 0 0; end: 0 4 0; color: green;" line__3="start:0 0 0; end: 0 0 4; color: blue;"></a-entity>
-        <a-entity rotation="-90 0 0" geometry="primitive: plane; width: 1; height: 1" material="shader: flat; color: #f6c038;"></a-entity>
+        <a-entity rotation="-90 0 0">
+            <a-entity position="0 0.1 0" geometry="primitive: plane; width: 1; height: 0.8" material="shader: flat; color: #f6c038;"></a-entity>
+            <a-entity position="-0.1 0 0" geometry="primitive: plane; width: 0.8; height: 1" material="shader: flat; color: #f6c038;"></a-entity>
+            <a-entity position="0.3 -0.3 0" rotation="0 0 45" geometry="primitive: plane; width: 0.28284; height: 0.28284" material="shader: flat; color: #f6c038;"></a-entity>
+        </a-entity>
         <a-entity id="main" position="0 1.2 0">
             <a-image src="#kulyapin"></a-image>
             <a-entity position="0 -0.75 0">
