@@ -45,8 +45,9 @@
         <img id="kalikov" src="assets/kalikov.png">
 
         <a-asset-item id="arrow" src="https://raw.githubusercontent.com/mankoff/kdm-idl/master/KML/models/arrow.dae"></a-asset-item>
-        <img id="catface" src="http://68.media.tumblr.com/2bcd5f1584814fb90fb001cf5519a27f/tumblr_oqqshj6MUC1vjxr9zo1_500.gif">
 
+        <img id="nav4-img-1" src="https://cdn.glitch.com/dcc03633-fec3-4dd6-a139-4a7f661aa681%2Fmeeting2.gif">
+        <img id="nav4-img-2" src="https://cdn.glitch.com/dcc03633-fec3-4dd6-a139-4a7f661aa681%2FVa11-anna-old-glitch(1)2.gif">
         <img id="nav45-img" src="https://cdn.glitch.com/dcc03633-fec3-4dd6-a139-4a7f661aa681%2FFood.png">
         <img id="nav47-img" src="https://cdn.glitch.com/dcc03633-fec3-4dd6-a139-4a7f661aa681%2Fcoffee%20beans.png">
         <img id="nav48-img" src="https://cdn.glitch.com/dcc03633-fec3-4dd6-a139-4a7f661aa681%2Fcoffee_fin.svg">
@@ -203,27 +204,136 @@
     <a-marker type="barcode" value="4">
         <a-entity position="0 0 0" rotation="-90 0 0">
 
-            <a-entity position="0 1 0">
-                <a-plane position="-1 0 0" height="1" width="1" rotation="0 0 0" opacity="0.5" color="tomato" visible="true"></a-plane>
-                <a-plane position="1 0 0" height="1" width="1" rotation="0 0 0" opacity="0.5" color="tomato" visible="true" material="shader:gif;src:#catface;" gif=""></a-plane>
-            </a-entity>
-
-            <a-entity position="0 0 0">
-                <a-plane position="0 0 0" height="1" width="1" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
-                    <a-text value="RealtimeBoard\nOffice 10" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
-                </a-plane>
+            <a-entity position="0 0.5 0">
+                <a-plane position="-1 0 0" height="2" width="2" rotation="0 0 0" opacity="1" color="white" material="shader:gif;src:#nav4-img-1;" gif=""></a-plane>
+                <a-plane position="1 0 0" height="2" width="2" rotation="0 0 0" opacity="1" color="white" material="shader:gif;src:#nav4-img-2;" gif=""></a-plane>
             </a-entity>
 
             <a-entity position="0 -1 0">
-                <a-plane position="-1 0 0" height="1" width="1" opacity="0.5" color="#34d2d7"></a-plane>
-                <a-plane position="1 0 0" height="1" width="1" opacity="0.5" color="#34d2d7"></a-plane>
-                <a-entity position="1 0 0">
-                    <a-collada-model src="#arrow" position="0 0 10">
-                        <a-animation attribute="position" dur="1000" fill="forwards" to="0 0 -10" repeat="indefinite" easing="ease-in-out"></a-animation>
-                    </a-collada-model>
-                </a-entity>
+                <a-plane position="0 0 0" height="1" width="4" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Meeting rooms" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
             </a-entity>
 
+        </a-entity>
+    </a-marker>
+
+    <a-marker type="barcode" value="5">
+        <a-entity position="0 0 0" rotation="-90 0 0">
+            <a-entity position="0 0 0" rotation="0 0 135">
+                <a-plane position="0 3 0" height="1" width="2" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Exit" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 0">
+                <a-plane position="0 3 0" height="1" width="5.5" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Developers & Operations" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 -45">
+                <a-plane position="0 5 0" height="1" width="5" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="People & Support" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 -90">
+                <a-plane position="0 3 0" height="1" width="4.5" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Kitchen & Office 9" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+        </a-entity>
+    </a-marker>
+
+    <a-marker type="barcode" value="6">
+        <a-entity position="0 0 0" rotation="-90 0 0">
+            <a-entity position="0 0 0" rotation="0 0 135">
+                <a-plane position="0 3 0" height="1" width="2" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Exit" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 90">
+                <a-plane position="0 3 0" height="1" width="2" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Office 8" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 0">
+                <a-plane position="0 3 0" height="1" width="5.5" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Canvas Team & Office 10" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 -90">
+                <a-plane position="0 3 0" height="1" width="2" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Office 17" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 -135">
+                <a-plane position="0 3 0" height="1" width="2" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Kitchen" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+        </a-entity>
+    </a-marker>
+
+    <a-marker type="barcode" value="7">
+        <a-entity position="0 0 0" rotation="-90 0 0">
+            <a-entity position="0 0 0" rotation="0 0 180">
+                <a-plane position="0 3 0" height="1" width="2" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Exit" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 0">
+                <a-plane position="0 3 0" height="1" width="2" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Office 9" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 -45">
+                <a-plane position="0 5 0" height="1" width="5.5" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Developers & DevOps" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 0 -90">
+                <a-plane position="0 3 0" height="1" width="5.5" rotation="0 0 0" opacity="0.5" color="yellow" visible="true">
+                    <a-text value="Designers & Marketing" align="center" color="blue" position="0 0 0.1" scale="2 2 2"></a-text>
+                </a-plane>
+                <a-collada-model src="#arrow" position="0 1 0" rotation="90 0 0">
+                    <a-animation attribute="position" dur="1000" fill="forwards" to="0 10 0" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-collada-model>
+            </a-entity>
         </a-entity>
     </a-marker>
 
