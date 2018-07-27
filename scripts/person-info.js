@@ -47,14 +47,20 @@ function injectPersonsInfo() {
 			whatIDo: 'business backend',
 			img: 'sretenskii',
 			barCode: 13
+		},
+		{
+			name: 'Oleg Plotnikov',
+			whatIDo: 'Party hard',
+			img: 'plotnikov',
+			preset: 'hiro'
 		}
 	]
 
 	var scene = $('#scene')
 	people.forEach(function (person) {
 		var personHTML =
-		'<a-marker type="barcode" value="' + person.barCode + '">\n'
-		+ '        <a-entity rotation="-90 0 0">\n'
+		(person.preset ? '<a-marker preset="' + person.preset + '">\n' : '<a-marker type="barcode" value="' + person.barCode + '">\n')
+		+ '        <a-entity rotation="-90 0 0" id="sticker-' + person.img + '">\n'
 		+ '            <a-entity position="0 0.1 0" geometry="primitive: plane; width: 1; height: 0.8" material="shader: flat; color: #f6c038;"></a-entity>\n'
 		+ '            <a-entity position="-0.1 0 0" geometry="primitive: plane; width: 0.8; height: 1" material="shader: flat; color: #f6c038;"></a-entity>\n'
 		+ '            <a-entity position="0.3 -0.3 0" rotation="0 0 45" geometry="primitive: plane; width: 0.28284; height: 0.28284" material="shader: flat; color: #f6c038;"></a-entity>\n'
