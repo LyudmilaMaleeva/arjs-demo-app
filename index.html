@@ -4,6 +4,26 @@
     <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        AFRAME.registerComponent('detect-visible-component', { 
+            schema: { 
+                func: { default: "" } 
+            }, 
+            init: function () { 
+                this.oldVisible = this.el.object3D.visible; 
+            }, 
+            tick: function () { 
+                var newVisible = this.el.object3D.visible; 
+                if (newVisible != this.oldVisible) { 
+                    var func = this.data.func; 
+                    var f = window[func]; 
+                    if (f) {
+                        f(this.el.object3D.visible); this.oldVisible = newVisible; 
+                    } 
+                } 
+            }
+        });
+    </script>
 </head>
 <body style='margin : 0; overflow: hidden;'>
 <a-scene embedded arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" id="scene">
@@ -27,9 +47,9 @@
     <!-- ------- -->
 
     <!-- Meeting room -->
-    <a-marker type='barcode' value='56'>
+    <a-marker type='barcode' value='56'  detect-visible-component='func: step1'>
         <a-entity rotation="-90 0 0">
-            <a-entity position="2 0 0" scale="4 4 1" text="value: Meeting Room 4"></a-entity>
+            <a-entity position="2 0 0" scale="4 4 1" text="value: Meeting Room #4"></a-entity>
             <a-entity position="-0.25 -0.2 0">
                 <a-entity position="0 0 0" text="value: Thursday; wrapCount: 10; width: 0.5"></a-entity>
                 <a-entity position="0 -0.12 0" text="value: 26; wrapCount: 6; width: 0.5"></a-entity>
@@ -43,12 +63,14 @@
             </a-entity>
             <a-entity position="0.95 -0.2 0">
                 <a-entity position="0 0 0" text="value: All-hands Meeting: The Plans [Company Offsite]"></a-entity>
-                <a-entity position="0 -0.1 0" text="value: Busy"></a-entity>
-                <a-entity position="0 -0.2 0" text="value: Hackathon official opening"></a-entity>
-                <a-entity id="meeting-room-56-button" clickable="true" position="0 -0.3 0" text="zOffset: 0.051; value: [EMPTY];"
+                <a-entity position="0 -0.1 0" text="value: Hackathon official opening"></a-entity>
+                <a-entity position="0 -0.2 0" text="value: Rocket Team planning"></a-entity>
+                <a-entity id="meeting-room-56-button" clickable="true" position="0 -0.3 0" text="zOffset: 0.051; value: [FREE]; color: #92CD00;"
                           geometry="primitive: box; height: 0.1; depth: 0.05" material="opacity: 0;"
                 ></a-entity>
-                <a-entity position="0 -0.4 0" text="value: Hackathon official closing"></a-entity>
+                <a-entity id="meeting-room-56-up-button" clickable="true" position="0 -0.4 0" text="zOffset: 0.051; value: [FREE]; color: #92CD00;" 
+                          geometry="primitive: box; height: 0.1; depth: 0.05" material="opacity: 0;">
+                </a-entity>
             </a-entity>
         </a-entity>
     </a-marker>
@@ -188,7 +210,7 @@
 	subscribeToClicks()
 	renderPeopleListMarkup()
     registerTestDevices()
-    activateMeetingRoom('meeting-room-56-button')
+    activateMeetingRoom()
     animateKitchenInfo(['kitchen-arrow1', 'kitchen-arrow2', 'kitchen-arrow3', 'kitchen-arrow4'])
     animatePersonInfo(['kuliapin', 'olisevich', 'kalikov'])
 </script>
