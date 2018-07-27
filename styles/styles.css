@@ -1,0 +1,86 @@
+.calendar-back {
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.eventManagerCloseBtn {
+    color: #fff;
+    border:none;
+    background-color:transparent;
+}
+.modal {
+    width: 320px;
+    box-shadow: 0 1px 19px 0px #00000078;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.modal input[type="text"] {
+    font-size:15px;
+    width: 100%;
+    box-sizing: border-box;
+    border:none;
+    font-size:17pt;
+    border-radius: 3px;
+    padding: 5px;
+    outline: none;
+}
+.modal button {
+    font-size:15px;
+    width: 160px;
+    box-sizing: border-box;
+    border: none;
+    padding: 10px 5px;
+    border-bottom-left-radius: 3px;
+    background-color: #00f;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #92cfde, #76bdd1);
+    font-weight: bold;
+}
+.modal button + button {
+    border-bottom-right-radius: 3px;
+    background-color: #ccc;
+    color: #777;
+    background-image: linear-gradient(to bottom, #E6E6E6, #CCCCCC);
+}
+.input-group {
+    padding: 25px;
+}
+.btn-group {
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+
+#myDevices {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+#myDevices div, #myDevices img {
+    height: 100px;
+    width: 50px;
+}
+
+#myDevices div {
+    display: none;
+    margin-right: 5px;
+}

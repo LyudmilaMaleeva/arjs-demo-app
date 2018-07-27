@@ -1,0 +1,17 @@
+[
+  {
+    "id": "s8",
+    "name": "samsung s8",
+    "image": "assets/S8_Black_front.png"
+  },
+  {
+    "id": "i5",
+    "name": "iphone 5",
+    "image": "assets/i5.png"
+  },
+  {
+    "id": "i7",
+    "name": "iphone 7",
+    "image": "assets/i7.png"
+  }
+]
