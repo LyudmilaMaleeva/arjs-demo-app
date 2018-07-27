@@ -24,7 +24,7 @@ function subscribeToClicks() {
 		for ( var i = 0; i < intersects.length; i++ ) {
 			if (intersects[i].object.el.getAttribute('clickable')) {
 				var el = intersects[i].object.el;
-				var clickInfo = { element: el, clientX: event.clientX, clientY: event.clientY };
+                var clickInfo = { element: el, clientX: event.clientX, clientY: event.clientY };
 				el.emit(DRAG_START_EVENT, clickInfo);
 			}
 		}
