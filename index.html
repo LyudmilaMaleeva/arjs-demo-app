@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
@@ -32,6 +32,12 @@
 <a-scene embedded arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" id="scene">
     <!-- Assets -->
     <a-assets id="assets">
+        <img id="danilov" src="assets/danilov.png">
+        <img id="lazchenko" src="assets/lazchenko.png">
+        <img id="maleeva" src="assets/maleeva.png">
+        <img id="necheukhin" src="assets/necheukhin.png">
+        <img id="sretenskii" src="assets/sretenskii.png">
+
         <img id="belyakov" src="assets/belyakov.png">
         <img id="churakov" src="assets/churakov.png">
         <img id="kataev" src="assets/kataev.png">
@@ -132,66 +138,6 @@
                     <a-triangle color="#CCC"></a-triangle>
                     <a-entity text="value: Cups; color: black; width: 2" rotation="0 0 90" position="0 0.6 0.1" scale="1 1.7 1"></a-entity>
                 </a-entity>
-            </a-entity>
-        </a-entity>
-    </a-marker>
-
-    <!-- Person info: kuliapin -->
-    <a-marker type='barcode' value='59'>
-        <a-entity rotation="-90 0 0">
-            <a-entity position="0 0.1 0" geometry="primitive: plane; width: 1; height: 0.8" material="shader: flat; color: #f6c038;"></a-entity>
-            <a-entity position="-0.1 0 0" geometry="primitive: plane; width: 0.8; height: 1" material="shader: flat; color: #f6c038;"></a-entity>
-            <a-entity position="0.3 -0.3 0" rotation="0 0 45" geometry="primitive: plane; width: 0.28284; height: 0.28284" material="shader: flat; color: #f6c038;"></a-entity>
-        </a-entity>
-        <a-entity id="personInfo-kuliapin" position="0 1.2 0">
-            <a-image src="#kuliapin"></a-image>
-            <a-entity position="0 -0.75 0">
-                <a-entity text="value: Anton Kuliapin; align: center; wrapCount: 15; width: 2"></a-entity>
-                <a-entity rotation="0 180 0" text="value: Anton Kuliapin; align: center; wrapCount: 15; width: 2"></a-entity>
-            </a-entity>
-            <a-entity position="0 -1 0">
-                <a-entity text="value: Developer; align: center; width: 2"></a-entity>
-                <a-entity rotation="0 180 0" text="value: Developer; align: center; width: 2"></a-entity>
-            </a-entity>
-        </a-entity>
-    </a-marker>
-
-    <!-- Person info: olisevich -->
-    <a-marker type='barcode' value='58'>
-        <a-entity rotation="-90 0 0">
-            <a-entity position="0 0.1 0" geometry="primitive: plane; width: 1; height: 0.8" material="shader: flat; color: #f6c038;"></a-entity>
-            <a-entity position="-0.1 0 0" geometry="primitive: plane; width: 0.8; height: 1" material="shader: flat; color: #f6c038;"></a-entity>
-            <a-entity position="0.3 -0.3 0" rotation="0 0 45" geometry="primitive: plane; width: 0.28284; height: 0.28284" material="shader: flat; color: #f6c038;"></a-entity>
-        </a-entity>
-        <a-entity id="personInfo-olisevich" position="0 1.2 0">
-            <a-image src="#olisevich"></a-image>
-            <a-entity position="0 -0.75 0">
-                <a-entity text="value: Eugene Olisevich; align: center; wrapCount: 15; width: 2"></a-entity>
-                <a-entity rotation="0 180 0" text="value: Eugene Olisevich; align: center; wrapCount: 15; width: 2"></a-entity>
-            </a-entity>
-            <a-entity position="0 -1 0">
-                <a-entity text="value: Frontend developer; align: center; width: 2"></a-entity>
-                <a-entity rotation="0 180 0" text="value: Frontend developer; align: center; width: 2"></a-entity>
-            </a-entity>
-        </a-entity>
-    </a-marker>
-
-    <!-- Person info: kalikov -->
-    <a-marker type='barcode' value='57'>
-        <a-entity rotation="-90 0 0">
-            <a-entity position="0 0.1 0" geometry="primitive: plane; width: 1; height: 0.8" material="shader: flat; color: #f6c038;"></a-entity>
-            <a-entity position="-0.1 0 0" geometry="primitive: plane; width: 0.8; height: 1" material="shader: flat; color: #f6c038;"></a-entity>
-            <a-entity position="0.3 -0.3 0" rotation="0 0 45" geometry="primitive: plane; width: 0.28284; height: 0.28284" material="shader: flat; color: #f6c038;"></a-entity>
-        </a-entity>
-        <a-entity id="personInfo-kalikov" position="0 1.2 0">
-            <a-image src="#kalikov"></a-image>
-            <a-entity position="0 -0.75 0">
-                <a-entity text="value: Aleksandr Kalikov; align: center; wrapCount: 15; width: 2"></a-entity>
-                <a-entity rotation="0 180 0" text="value: Aleksandr Kalikov; align: center; wrapCount: 15; width: 2"></a-entity>
-            </a-entity>
-            <a-entity position="0 -1 0">
-                <a-entity text="value: Server Developer; align: center; width: 2"></a-entity>
-                <a-entity rotation="0 180 0" text="value: Server Developer; align: center; width: 2"></a-entity>
             </a-entity>
         </a-entity>
     </a-marker>
@@ -399,7 +345,7 @@
 	renderPeopleListMarkup()
     registerTestDevices()
     activateMeetingRoom()
+	injectPersonsInfo()
     animateKitchenInfo(['kitchen-arrow1', 'kitchen-arrow2', 'kitchen-arrow3', 'kitchen-arrow4'])
-    animatePersonInfo(['kuliapin', 'olisevich', 'kalikov'])
 </script>
 </body>
