@@ -73,6 +73,7 @@
     left: 0;
     right: 0;
     height: 100px;
+    z-index: 10;
 }
 
 #myDevices div, #myDevices img {
@@ -83,4 +84,8 @@
 #myDevices div {
     display: none;
     margin-right: 5px;
+}
+
+.a-enter-vr {
+    display: none !important;
 }
